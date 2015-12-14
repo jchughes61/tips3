@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E203A57F1C18970500B07D5C"
-               BuildableName = "tips3.app"
-               BlueprintName = "tips3"
-               ReferencedContainer = "container:tips3.xcodeproj">
+               BuildableName = "Tip Jar.app"
+               BlueprintName = "Tip Jar"
+               ReferencedContainer = "container:Tip Jar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E203A5931C18970700B07D5C"
-               BuildableName = "tips3Tests.xctest"
-               BlueprintName = "tips3Tests"
-               ReferencedContainer = "container:tips3.xcodeproj">
+               BuildableName = "Tip Jar.xctest"
+               BlueprintName = "Tip JarTests"
+               ReferencedContainer = "container:Tip Jar.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E203A59E1C18970700B07D5C"
-               BuildableName = "tips3UITests.xctest"
-               BlueprintName = "tips3UITests"
-               ReferencedContainer = "container:tips3.xcodeproj">
+               BuildableName = "Tip Jar.xctest"
+               BlueprintName = "Tip JarUITests"
+               ReferencedContainer = "container:Tip Jar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E203A57F1C18970500B07D5C"
-            BuildableName = "tips3.app"
-            BlueprintName = "tips3"
-            ReferencedContainer = "container:tips3.xcodeproj">
+            BuildableName = "Tip Jar.app"
+            BlueprintName = "Tip Jar"
+            ReferencedContainer = "container:Tip Jar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E203A57F1C18970500B07D5C"
-            BuildableName = "tips3.app"
-            BlueprintName = "tips3"
-            ReferencedContainer = "container:tips3.xcodeproj">
+            BuildableName = "Tip Jar.app"
+            BlueprintName = "Tip Jar"
+            ReferencedContainer = "container:Tip Jar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E203A57F1C18970500B07D5C"
-            BuildableName = "tips3.app"
-            BlueprintName = "tips3"
-            ReferencedContainer = "container:tips3.xcodeproj">
+            BuildableName = "Tip Jar.app"
+            BlueprintName = "Tip Jar"
+            ReferencedContainer = "container:Tip Jar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
