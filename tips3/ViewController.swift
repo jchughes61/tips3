@@ -61,6 +61,7 @@ class ViewController: UIViewController
     override func viewWillAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
         tipControl.selectedSegmentIndex = defaults.integerForKey("DefaultSetting")
+        onEditingChanged(self)
     }
     
 }
