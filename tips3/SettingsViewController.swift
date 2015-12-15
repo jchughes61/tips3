@@ -12,6 +12,9 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var TipPercentageControl: UISegmentedControl!
     
+    @IBOutlet weak var ColorScheme: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +30,9 @@ class SettingsViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(TipPercentageControl.selectedSegmentIndex, forKey: "DefaultSetting")
+        defaults.setInteger(ColorScheme.selectedSegmentIndex, forKey: "Color")
         defaults.synchronize()
+        
     }
 
     override func viewWillAppear(animated: Bool) {

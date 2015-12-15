@@ -15,6 +15,7 @@
 		E203A5991C18970700B07D5C /* tips3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203A5981C18970700B07D5C /* tips3Tests.swift */; };
 		E203A5A41C18970700B07D5C /* tips3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203A5A31C18970700B07D5C /* tips3UITests.swift */; };
 		E264813D1C1DEB2900028B6B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264813C1C1DEB2900028B6B /* SettingsViewController.swift */; };
+		E26481411C20BADD00028B6B /* Jar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E26481401C20BADD00028B6B /* Jar.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E203A5A31C18970700B07D5C /* tips3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tips3UITests.swift; sourceTree = "<group>"; };
 		E203A5A51C18970700B07D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E264813C1C1DEB2900028B6B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E26481401C20BADD00028B6B /* Jar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jar.jpg; path = ../../../Documents/Pictures/Jar.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		E203A5821C18970500B07D5C /* tips3 */ = {
 			isa = PBXGroup;
 			children = (
+				E26481401C20BADD00028B6B /* Jar.jpg */,
 				E203A5831C18970500B07D5C /* AppDelegate.swift */,
 				E264813C1C1DEB2900028B6B /* SettingsViewController.swift */,
 				E203A5851C18970500B07D5C /* ViewController.swift */,
@@ -238,6 +241,7 @@
 				E203A58E1C18970600B07D5C /* LaunchScreen.storyboard in Resources */,
 				E203A58B1C18970600B07D5C /* Assets.xcassets in Resources */,
 				E203A5891C18970600B07D5C /* Main.storyboard in Resources */,
+				E26481411C20BADD00028B6B /* Jar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

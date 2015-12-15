@@ -23,8 +23,28 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Made the keyboard pop up at beginning
+        billField.becomeFirstResponder()
+        
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let lastEdit: NSDate? = defaults.objectForKey("LastUsed") as! NSDate?
+        
+        if lastEdit != nil
+        {
+            let timeInterval: NSTimeInterval = NSDate().timeIntervalSinceDate(lastEdit!)
+            if timeInterval <= 600 {
+                billField.text = defaults.objectForKey("billAmount") as? String
+                onEditingChanged(self)
+            }
+        else {
+            billField.text = ""
+            onEditingChanged(self)
+        }
+        
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,24 +52,37 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onEditingChanged
-        (sender: AnyObject) {
+        @IBAction func onEditingChanged(sender: AnyObject) {
         
+            let defaults = NSUserDefaults.standardUserDefaults()
+            
             let tipPercentages = [0.18, 0.20, 0.22]
+            let LastUsed = NSDate()
+            
+            defaults.setObject(LastUsed, forKey: "Dates")
+            defaults.setObject(billField.text, forKey: "billAmount")
             
             let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
             
-           let billAmount = NSString(string: billField.text!).doubleValue
+            let billAmount = NSString(string: billField.text!).doubleValue
             
             let tip = billAmount * tipPercentage
             let total = billAmount + tip
             
+            // Localized the Currency
+            let formatter = NSNumberFormatter()
+            formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+            formatter.locale = NSLocale.currentLocale()
             
-            tipLabel.text = "$\(tip)"
-            totalLabel.text = "$\(total)"
+            tipLabel.text = formatter.stringFromNumber(tip)
+            totalLabel.text = formatter.stringFromNumber(total)
             
-            tipLabel.text = String(format: "$%.2f", tip)
-            totalLabel.text = String(format: "$%.2f", total)
+            
+            //tipLabel.text = String(format: "$%.2f", tip)
+            //totalLabel.text = String(format: "$%.2f", total)
+            
+            
+            
     }
 
     @IBAction func onTap(sender: AnyObject)
@@ -62,6 +95,18 @@ class ViewController: UIViewController
         let defaults = NSUserDefaults.standardUserDefaults()
         tipControl.selectedSegmentIndex = defaults.integerForKey("DefaultSetting")
         onEditingChanged(self)
+        
+        
+        let ColorScheme = defaults.integerForKey("Color")
+        
+        if ColorScheme == 0
+        {
+            self.view.backgroundColor = UIColor.greenColor()
+        }
+        else
+        {
+            self.view.backgroundColor = UIColor.yellowColor()
+        }
     }
     
 }
