@@ -38,6 +38,7 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
         TipPercentageControl.selectedSegmentIndex = defaults.integerForKey("DefaultSetting")
+        ColorScheme.selectedSegmentIndex = defaults.integerForKey("Color")
     }
     
     /*

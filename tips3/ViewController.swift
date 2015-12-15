@@ -19,6 +19,12 @@ class ViewController: UIViewController
     @IBOutlet weak var totalLabel:
         UILabel!
     
+    @IBOutlet weak var twoPeople: UILabel!
+    @IBOutlet weak var threePeople: UILabel!
+    @IBOutlet weak var fourPeople: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +34,9 @@ class ViewController: UIViewController
         
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        twoPeople.text = "$0.00"
+        threePeople.text = "$0.00"
+        fourPeople.text = "$0.00"
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let lastEdit: NSDate? = defaults.objectForKey("LastUsed") as! NSDate?
@@ -69,6 +78,10 @@ class ViewController: UIViewController
             let tip = billAmount * tipPercentage
             let total = billAmount + tip
             
+            let twoPeople1 = (total/2)
+            let threePeople1 = (total/3)
+            let fourPeople1 = (total/4)
+            
             // Localized the Currency
             let formatter = NSNumberFormatter()
             formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
@@ -76,6 +89,9 @@ class ViewController: UIViewController
             
             tipLabel.text = formatter.stringFromNumber(tip)
             totalLabel.text = formatter.stringFromNumber(total)
+            twoPeople.text = formatter.stringFromNumber(twoPeople1)
+            threePeople.text = formatter.stringFromNumber(threePeople1)
+            fourPeople.text = formatter.stringFromNumber(fourPeople1)
             
             
             //tipLabel.text = String(format: "$%.2f", tip)
